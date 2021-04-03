@@ -1,0 +1,37 @@
+/*PlutoX Debugging API*/
+
+#include"PlutoPilot.h"
+#include"Estimate.h"  //gives access to drone rates, angles, velocities and positions
+#include"Utils.h"     //gives access to LED, Graphs and Print
+
+
+void plutoInit()
+{
+}
+
+
+void onLoopStart()
+{
+  LED.flightStatus(DEACTIVATE);	  //Disable default LED behaviour
+}
+
+void plutoLoop()
+{
+  if(Velocity.get(Z)>0)
+  {
+	  LED.set(RED,ON);    //Red LED will indicate FC going downwards
+	  LED.set(GREEN,OFF);
+  }
+  else    //If the drone is moving downwards
+  {
+    LED.set(RED,OFF);   //Green LED will indicate FC going downwards
+    LED.set(GREEN,ON);
+  }
+  Monitor.println("Velocity Z: ",Velocity.get(Z));    //Prints velocity in monitor
+  Graph.red(Velocity.get(Z),1);
+} 
+
+void onLoopFinish()
+{
+LED.flightStatus(ACTIVATE);   //Enable default LED behaviour
+}
