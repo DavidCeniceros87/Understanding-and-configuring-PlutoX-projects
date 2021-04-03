@@ -1,0 +1,2 @@
+# Understanding-and-configuring-PlutoX-projects
+The projects presented are used to achieve a better understanding of programing and how to understand how to PlutoX works. The projects will utilize the sensors in conjunction with the LEDs on the flight controller to demonstrate the output of each projects. Some of these projects will involve the drone taking flight while performing a task. Images and video of these tasks will be provided when the project has been completed and tested.
