@@ -27,7 +27,7 @@ void plutoLoop()
     LED.set(RED,OFF);   //Green LED will indicate FC going downwards
     LED.set(GREEN,ON);
   }
-  Monitor.println("Velocity Z: ",Velocity.get(Z));    //Prints velocity in IDE monitor
+  Monitor.println("Velocity Z: ",Velocity.get(Z));    //Prints velocity in monitor
   Graph.red(Velocity.get(Z),1);
 } 
 
