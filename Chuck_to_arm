@@ -1,0 +1,31 @@
+/*PlutoX Chuck to arm*/
+
+#include"PlutoPilot.h"
+#include"Sensor.h"  	  //gives access to net acceleration value
+#include"Utils.h"     	//gives access to LED, Graphs and Print
+#include"User.h"		    //allows us to arm drone
+
+void plutoInit()
+{
+}
+
+
+void onLoopStart()
+{
+	LED.flightStatus(DEACTIVATE);	  //Disable default LED behaviour
+}
+
+void plutoLoop()
+{
+	if(Acceleration.getNetAcc()<2&&(!FlightStatus.check(FS_CRASHED)))	//Check for condition before free fall
+	{
+		Command.arm();	//arm drone
+		LED.set(GREEN,ON);
+		LED.set(RED,ON);
+	}
+}
+
+void onLoopFinish()
+{
+	LED.flightStatus(ACTIVATE);   //Enable default LED behaviour
+}
