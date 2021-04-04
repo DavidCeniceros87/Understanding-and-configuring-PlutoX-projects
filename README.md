@@ -3,3 +3,6 @@ The projects presented are used to achieve a better understanding of programing 
 
 Project 1) [DebuggingAPI](https://github.com/DavidCeniceros87/Understanding-and-configuring-PlutoX-projects/blob/main/DebuggingAPI):
 This projects allows us to get practice and a understanding of how the sensors and LED can be utilized. This code utilizes the accelerometer and the LEDs located on the Flight controller to indicate when the drone is moving along the positive or negative Z axis.
+
+Project 2) [Chuck to arm](https://github.com/DavidCeniceros87/Understanding-and-configuring-PlutoX-projects/blob/main/Chuck_to_arm):
+This project was designed to allow us to practice our coding skills and working with the accelerometer. The purpose of the project is to arm the drone when it experiences free fall to keep it from crashing. 
