@@ -1,9 +1,9 @@
 /*PlutoX Chuck to arm*/
 
 #include"PlutoPilot.h"
-#include"Sensor.h"  	  //gives access to net acceleration value
-#include"Utils.h"     	//gives access to LED, Graphs and Print
-#include"User.h"		    //allows us to arm drone
+#include"Sensor.h"		//gives access to net acceleration value
+#include"Utils.h"     		//gives access to LED, Graphs and Print
+#include"User.h"		//allows us to arm drone
 
 void plutoInit()
 {
