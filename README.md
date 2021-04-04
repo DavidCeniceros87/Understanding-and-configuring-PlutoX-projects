@@ -6,3 +6,6 @@ This projects allows us to get practice and a understanding of how the sensors a
 
 Project 2) [Chuck to arm](https://github.com/DavidCeniceros87/Understanding-and-configuring-PlutoX-projects/blob/main/Chuck_to_arm):
 This project was designed to allow us to practice our coding skills and working with the accelerometer. The purpose of the project is to arm the drone when it experiences free fall to keep it from crashing. 
+
+Project 3) [Fly acro](https://github.com/DavidCeniceros87/Understanding-and-configuring-PlutoX-projects/blob/main/Fly_Acro):
+This project will help us test the different flight modes available on the PlutoX drone with the help of the gyro sensor. The modes can be switched by activating/disactivating the developer mode.
