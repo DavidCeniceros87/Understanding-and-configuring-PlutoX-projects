@@ -11,7 +11,7 @@ void plutoInit()
 
 void onLoopStart()
 {
-	LED.flightStatus(DEACTIVATE);	  //Disable default LED behaviour
+	LED.flightStatus(DEACTIVATE);	  	//Disable default LED behaviour
 }
 
 void plutoLoop()
