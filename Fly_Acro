@@ -1,7 +1,7 @@
 /*PlutoX Fly Arco*/
 
 #include"PlutoPilot.h"
-#include"Utils.h"     	//gives access to LED, Graphs and Print
+#include"Utils.h"     		//gives access to LED, Graphs and Print
 #include"User.h"		//allows us to arm drone
 
 void plutoInit()
@@ -25,5 +25,5 @@ void plutoLoop()
 
 void onLoopFinish()
 {
-	LED.flightStatus(ACTIVATE);   //Enable default LED behaviour
+	LED.flightStatus(ACTIVATE);   	//Enable default LED behaviour
 }
