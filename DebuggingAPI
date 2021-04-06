@@ -1,4 +1,4 @@
-/*PlutoX Debugging API*/
+/*PlutoX Debugging API - David Ceniceros*/
 
 #include"PlutoPilot.h"
 #include"Estimate.h"  //gives access to drone rates, angles, velocities and positions
