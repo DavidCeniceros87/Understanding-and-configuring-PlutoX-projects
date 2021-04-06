@@ -1,4 +1,4 @@
-/*PlutoX Chuck to arm*/
+/*PlutoX Chuck to arm - David Ceniceros*/
 
 #include"PlutoPilot.h"
 #include"Sensor.h"		//gives access to net acceleration value
