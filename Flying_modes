@@ -1,4 +1,4 @@
-/*PlutoX Flying modes*/
+/*PlutoX Flying modes - David Ceniceros*/
 
 #include"PlutoPilot.h"
 #include"Utils.h"     		//gives access to LED, Graphs and Print
