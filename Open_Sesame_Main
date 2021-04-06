@@ -1,0 +1,45 @@
+/*PlutoX Open sesame main - David Ceniceros*/
+
+#include"PlutoPilot.h"
+#include"Utils.h"     	//gives access to LED, Graphs and Print
+#include"Sensor.h"  	//gives access to net acceleration value
+#include"User.h"		//allows us to arm drone
+#include"Math.h"		//get value of heading of drone
+#include"Control.h"		//set the heading for PlutoX drone
+
+int initPressure;
+int currPressure;
+
+void plutoInit()
+{
+}
+
+void onLoopStart()
+{
+	initPressure=Barometer.get(PRESSURE);		//obtain initial temp
+	LED.flightStatus(DEACTIVATE);
+}
+
+void plutoLoop()
+{
+	currPressure=Barometer.get(PRESSURE);		//obtin press. values
+  
+	if(fabs(currPressure-initPressure)>8)		//calculates difference between current and initial pressure greater than 8
+	{
+		LED.set(RED, ON);
+		Command.arm();
+		DesiredPosition.set(Z,75);
+	}
+	initPressure=((initPressure*0.9)+(currPressure*0.1));
+
+	Monitor.println("old pressure: ",initPressure);
+	Monitor.println("new pressure: ",currPressure);
+	Graph.red(currPressure);
+} 
+
+void onLoopFinish()
+{
+	LED.flightStatus(ACTIVATE);   //Enable default LED behavior
+}
+
+
