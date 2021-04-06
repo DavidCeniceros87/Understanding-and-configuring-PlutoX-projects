@@ -9,3 +9,6 @@ This project was designed to allow us to practice our coding skills and working 
 
 Project 3) [Flying modes](https://github.com/DavidCeniceros87/Understanding-and-configuring-PlutoX-projects/blob/main/Fly_Acro):
 This project will help us test the different flight modes available on the PlutoX drone with the help of the gyro sensor. The modes can be switched by activating/disactivating the developer mode.
+
+Project 4) [Open sesame](https://github.com/DavidCeniceros87/Understanding-and-configuring-PlutoX-projects/blob/main/Open_Sesame_Main):
+This project allows us to expand our knowledge on how barometers work. In this project, the drone is to ascend when it has detected a change in pressure in the atmosphere. If the pressure has been changed, the drone will ascend and pressure changes will be displayed on the IDE of the PlutoX.
