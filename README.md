@@ -12,3 +12,6 @@ This project will help us test the different flight modes available on the Pluto
 
 Project 4) [Open sesame](https://github.com/DavidCeniceros87/Understanding-and-configuring-PlutoX-projects/blob/main/Open_Sesame_Main):
 This project allows us to expand our knowledge on how barometers work. In this project, the drone is to ascend when it has detected a change in pressure in the atmosphere. If the pressure has been changed, the drone will ascend and pressure changes will be displayed on the IDE of the PlutoX.
+
+Project 5) [Temperature reactive drone](https://github.com/DavidCeniceros87/Understanding-and-configuring-PlutoX-projects/blob/main/Temperature_reactive_drone):
+This project will consist of working with the barometer but it will be used to determine the temperature of its surrounding area. The LED on the drone will change when it has experience a change in temperature while the IDE monitor will display a value representing the initial temperature and will change depending on the temperature.
