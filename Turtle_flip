@@ -1,0 +1,52 @@
+/*PlutoX Turtle flip - David Ceniceros*/
+
+#include"PlutoPilot.h"
+#include"Utils.h"     	//gives access to LED, Graphs and Print
+#include"User.h"		//allows us to arm drone
+#include"Control.h"		//set the heading for PlutoX drone
+#include"Estimate.h"	//get value of heading of drone
+#include"Motor.h"		//allows access to motor function
+
+int angle;
+
+#define ABS(x) ((x)>0?(x):-(x))		//expression which allows if (x) > 0, then allow (x), otherwise -(x)
+
+void plutoInit()
+{
+	Motor.initReversibleMotors();		//initialize reverse motors
+}
+
+void onLoopStart()
+{
+	LED.flightStatus(DEACTIVATE);		//Disable default flight behavior
+
+	//sets direction of motors
+	Motor.setDirection(M1,ANTICLOCK_WISE);
+	Motor.setDirection(M2,CLOCK_WISE);
+	Motor.setDirection(M3,ANTICLOCK_WISE);
+	Motor.setDirection(M4,CLOCK_WISE);
+}
+
+void plutoLoop()
+{
+	angle=Angle.get(AG_ROLL);			//obtains current angle value
+	Monitor.println("Angle: ",angle);
+
+	if(!FlightStatus.check(FS_ARMED))	//checks if drone is armed
+	{
+		if(ABS(angle)>800)				//checks if drone is flipped
+		{
+			//motors designated to flip drone
+			Motor.set(M1,2000);
+			Motor.set(M2,2000);
+		}
+		else
+		{
+			//allows drone to fly normally if right side up
+			Motor.set(M1,1000);
+			Motor.set(M2,1000);
+			Motor.set(M3,1000);
+			Motor.set(M4,1000);
+		}
+	}
+}
