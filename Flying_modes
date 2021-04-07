@@ -16,11 +16,11 @@ void onLoopStart()
 
 void plutoLoop()
 {
-	FlightMode.set(RATE);		//change flight mode to rate mode
+	FlightMode.set(RATE);		//change flight mode to ANGLE, RATE, MAGHOLD, HEADFREE, ALTITUDEHOLD, THROTTLE_MODE
 
-		LED.set(BLUE,ON);
-		LED.set(RED,ON);
-		LED.set(GREEN,OFF);
+	LED.set(BLUE,ON);
+	LED.set(RED,ON);
+	LED.set(GREEN,OFF);
 }
 
 void onLoopFinish()
