@@ -1,0 +1,54 @@
+/*PlutoX Temp. react*/
+
+#include"PlutoPilot.h"
+#include"Sensor.h"  	//gives access to net acceleration value
+#include"Utils.h"     	//gives access to LED, Graphs and Print
+
+int initemp;
+int currtemp;
+
+void plutoInit()
+{
+}
+
+void onLoopStart()
+{
+	LED.flightStatus(DEACTIVATE);				//Disable default LED behavior
+	LED.set(BLUE,ON);
+	initemp=Barometer.get(TEMPERATURE)/100;		//get initial temp
+	Monitor.print("Initial temp:", initemp);
+}
+
+void plutoLoop()
+{
+	currtemp=Barometer.get(TEMPERATURE)/100;	//get new temp
+
+	Graph.red(initemp,1);
+	Graph.green(currtemp,1);
+	Monitor.print("Current temp:",currtemp);
+
+	if(currtemp>initemp)						//if temperature is higher than initial
+	{
+		LED.set(RED,ON);
+		LED.set(BLUE,OFF);
+		Monitor.println(" This area is hot");
+	}
+	else if (currtemp<initemp)					//if temperature is lower than initial
+	{
+		LED.set(GREEN,ON);
+		LED.set(BLUE,OFF);
+		Monitor.println(" This area is cool");
+	}
+	else
+	{
+		Monitor.println(" no change in temp");	//if there is no change in temperature
+		LED.set(BLUE,ON);
+		LED.set(RED,OFF);
+		LED.set(GREEN,OFF);
+	}
+}
+
+void onLoopFinish()
+{
+	LED.flightStatus(ACTIVATE);					//Enable default LED behavior
+}
