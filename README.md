@@ -15,3 +15,6 @@ This project allows us to expand our knowledge on how barometers work. In this p
 
 Project 5) [Temperature reactive drone](https://github.com/DavidCeniceros87/Understanding-and-configuring-PlutoX-projects/blob/main/Temperature_reactive_drone):
 This project will consist of working with the barometer but it will be used to determine the temperature of its surrounding area. The LED on the drone will change when it has experience a change in temperature while the IDE monitor will display a value representing the initial temperature and will change depending on the temperature.
+
+Project 6) [Turtle flip](https://github.com/DavidCeniceros87/Understanding-and-configuring-PlutoX-projects/blob/main/Turtle_flip):
+The following project allows the drone to flip to its starting position when it detects that the drone is upside down. We will be able to fly the drone normally once it has flipped right side up. The program allows two of its propellers to help correct the orientation of the drone. 
